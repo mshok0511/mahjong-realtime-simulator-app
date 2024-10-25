@@ -1,0 +1,16 @@
+# python -m venv env
+# env\Scripts\activate
+
+# VSCodeエラー対策コマンド
+# Set-ExecutionPolicy RemoteSigned -Scope Process
+
+# pip install -r requirements.txt
+
+Flask==3.0.3
+Flask-SocketIO==5.4.1
+python-dotenv==1.0.1
+numpy==2.1.2
+pygetwindow==0.0.9
+opencv-contrib-python==4.10.0.84
+mss==9.0.2
+requests=2.32.3

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <title>麻雀リアルタイムシミュレーター</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    </head>
+        <h1>シミュレーション結果出力画面</h1>
+        <a id="toggleButton" class="tglbtn">Start Capture</a>
+        <div id="error"></div>
+
+        <div class="image-wrapper">
+            <img id="screenshot" src="" alt="screenshot">
+        </div>
+
+        <!-- <h3>手持ち牌</h3>
+        <ul id="tehaiList">
+        </ul>
+        <h3>自模牌</h3>
+        <p id="tsumohai"></p>
+
+        <h3>ドラ牌</h3>
+        <ul id="doraList">
+        </ul> -->
+
+        <div>
+            <fieldset class="option_box">
+                <legend class="config_item">
+                    <h3>向聴タイプを選択してください</h3>
+                </legend>
+                <label>
+                    <input type="radio" name="option" value="1" checked> 一般手
+                </label>
+                &nbsp;<label>
+                    <input type="radio" name="option" value="2"> 七対子手
+                </label>
+                &nbsp;<label>
+                    <input type="radio" name="option" value="4"> 国士無双手
+                </label>
+            </fieldset>
+        </div>
+
+        <!-- <fieldset>
+            <legend class="config_item">
+                <h3>現在の巡目を入力</h3>
+            </legend>
+            <div class="number-input-container">
+                <button id="decrement">-</button>
+                <input type="number" id="tentacles" name="tentacles" min="1" max="17" value="1"/>
+                <button id="increment">+</button>
+            </div>
+        </fieldset> -->
+        <div class="number-input-container">
+            <h3>現在の巡目を入力</h3>
+            <button id="decrement">-</button>
+            <input type="number" id="tentacles" name="tentacles" min="1" max="17" value="1"/>
+            <button id="increment">+</button>
+        </div>
+
+        <div>
+            <fieldset class="checkbox">
+                <legend class="config_item">
+                    <h3>考慮項目</h3>
+                </legend>
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="1"> 向聴落とし考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="2"> 手変わり考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="4"> ダブル立直考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="8"> 一発考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="16"> 海底撈月考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="32"> 裏ドラ考慮
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="option" value="64"> 和了確率を最大化
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <a id="calc" class="tglbtn">計算実行</a>
+            <!-- <button id="calc">計算実行</button> -->
+            <p id="error_calc"></p>
+            <ul id="response">
+            </ul>
+        </div>
+    </body>
+    <script src="../static/js/script.js"></script>
+</html>
