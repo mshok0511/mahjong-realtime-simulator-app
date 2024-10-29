@@ -337,8 +337,8 @@ async def async_score_clac(doraList,tehai):
 
     req_data = {
         "version": "0.9.0",
-        "zikaze": Tile.Ton, # 正式は数値を渡す予定
-        "bakaze": Tile.Ton, # 正式は数値を渡す予定
+        "zikaze": Tile.Ton, 
+        "bakaze": Tile.Ton, 
         "turn": turn,
         "syanten_type": syanten_Type,
         "dora_indicators": dora_indicators,
