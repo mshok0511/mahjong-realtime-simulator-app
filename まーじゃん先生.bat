@@ -1,4 +1,5 @@
 cd .\majan-simulator-app\
 npx electron .
 
-server.exe
+// cd 自身のserver.exeファイルの相対パス
+// server.exe
