@@ -25,8 +25,8 @@ def cropMyHandImage(jantamaMainImage):
     height, width = jantamaMainImage.shape[:2]
     myHandLeft = int(width*203/1665)
     myHandRight = int(width*1255/1665)
-    myHandTop = int(height*760/938)
-    myHandBottom = int(height*870/938)
+    myHandTop = int(height*810/938)
+    myHandBottom = int(height*920/938)
     tsumoLeft = int(width*1278/1665)
     tsumoRight = int(width*1359/1665)
 
@@ -121,7 +121,7 @@ def divideDoraImage(doraImage):
 #     return [sutehai_info_list, sutehai_img]
 
 # テンプレートマッチング処理関数
-def recogPaiImage(paiImage, paiListImage, threshold = 0.7):
+def recogPaiImage(paiImage, paiListImage, threshold = 0.6):
     # 雀牌表画像のグレースケール化
     paiListImage_gray = cv2.cvtColor(paiListImage, cv2.COLOR_BGR2GRAY)
     
